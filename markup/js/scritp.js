@@ -16,12 +16,7 @@ $(document).ready(function() {
 
 		if(e.pageY <= 5)
 		{
-			$('#test-modal').magnificPopup({
-				type: 'inline',
-				preloader: false,
-				focus: '#username',
-				modal: true
-			});
+			$('.popup-modal').trigger('click');
 
 		}
 

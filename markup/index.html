@@ -27,18 +27,19 @@
 			$('.flexslider').flexslider({
 				animation: "slide",              //Выбор типа анимации (fade/slide)
 				directionNav: false,             //Включение навигации предыдущий/следующий (true/false)
-				controlNav: true
+				controlNav: false
 			});
 		});
 
 
 	});
 </script>
-<a class="popup-modal" href="#test-modal">Open modal</a>
+<a class="popup-modal" href="#test-modal" style="display: none;" rel="nofollow">Open modal</a>
 
 <div id="test-modal" class="mfp-hide white-popup-block">
 	<div class="row">
-		<div class="col-xs-4 main-form">
+		<p><a class="popup-modal-dismiss" href="#"><span class="glyphicon glyphicon-remove-circle"></span></a></p>
+		<div class="col-xs-12 main-form">
 			<h2>Оставьте отзыв</h2>
 			<form role="form">
 				<div class="form-group">
@@ -86,7 +87,6 @@
 			</div>
 		</div>
 	</div>
-	<p><a class="popup-modal-dismiss" href="#">Dismiss</a></p>
 </div>
 <div class="wrap">
 	<!--<div class="row">-->
