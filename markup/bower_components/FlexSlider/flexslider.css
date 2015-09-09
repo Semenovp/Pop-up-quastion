@@ -50,10 +50,10 @@
   display: none;
   -webkit-backface-visibility: hidden;
 }
-.flexslider .slides img {
-  width: 100%;
-  display: block;
-}
+/*.flexslider .slides img {*/
+  /*width: 100%;*/
+  /*display: block;*/
+/*}*/
 .flexslider .slides:after {
   content: "\0020";
   display: block;
@@ -91,9 +91,9 @@ html[xmlns] .flexslider .slides {
 .flexslider .slides {
   zoom: 1;
 }
-.flexslider .slides img {
-  height: auto;
-}
+/*.flexslider .slides img {*/
+  /*height: auto;*/
+/*}*/
 .flex-viewport {
   max-height: 2000px;
   -webkit-transition: all 1s ease;

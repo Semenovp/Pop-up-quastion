@@ -63,3 +63,19 @@ body,html {
 	float: left;
 	margin-right: 8px;
 }
+.mfp-content {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 auto;
+	text-align: left;
+	z-index: 1045;
+}
+.white-popup-block {
+	position: relative;
+	background: #FFF;
+	padding: 2em 3em;
+	width: auto;
+	margin: 20px auto;
+	max-width: 600px;
+}
