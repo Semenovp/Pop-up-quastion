@@ -82,3 +82,11 @@ body,html {
 .popup-modal-dismiss {
 	float:right;
 }
+.category, .note {
+	border-top:1px solid #ccc;
+	border-bottom: 1px solid #ddd;
+	margin:8px 0;
+}
+.form-control-edit {
+	margin:10px 0;
+}

@@ -1,18 +1,25 @@
 <?php
-session_start();
-
+	require_once('DB.php');
 class Auth {
 	public function isAuth() {
-		if(isset($_SESSION['is_auth'])) {
-			return $_SESSION['is_auth'];
+		if($_SESSION['is_auth'] == true) {
+			return true;
 		}
 		else return false;
 	}
-	public function checkUser($login='', $password='') {
-		$db = new SQLite3("C:/OpenServer/domains/popup.ru/Pop-up-quastion/admin/data/data.db");
-		$result = $db->query("SELECT * FROM users ") or die ($db->lastErrorMsg());
-		$db->close();
-//		$row = $result->fetchArray($result);
+	public function checkUser($login, $password) {
+		$db = DB::getDB();
+		$result = $db->selectRow("SELECT * FROM users WHERE login = '$login'");
+		if ($result['pass'] != $password ) {
+			return false;
+		} else {
+			return true;
+		}
+
+	}
+	public function out() {
+		$_SESSION = array(); //Очищаем сессию
+		session_destroy(); //Уничтожаем
 	}
 
 } 
