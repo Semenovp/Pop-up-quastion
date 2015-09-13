@@ -23,4 +23,8 @@ class Comment {
 		$db = DB::getDB();
 		$insert = $db->query("INSERT INTO comments (content,tagn,note,status) VALUES('$data','-','-',0)");
 	}
+	public function approvedComment($id) {
+		$db = DB::getDB();
+		$update = $db->query("UPDATE comments SET status='1'WHERE ID='$id'");
+	}
 } 

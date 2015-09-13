@@ -11,9 +11,13 @@
 	if (isset($_GET['deleteId'])){
 		$comments->deleteComment($_GET['deleteId']);
 	}
+	if (isset($_GET['approvedid'])){
+		$comments->approvedComment($_GET['approvedid']);
+	}
 //	if (!$auth->isAuth()) {
 //		header('Location: login.php');
 //	}
+	var_dump($_SESSION);
 ?>
 
 <body>
@@ -47,13 +51,13 @@
 									</div>
 									<div class="btn-group btn-group-justified">
 										<div class="btn-group">
-											<a href="comments.php/?approved=true&id=<?php echo $comment_arr['ID'];?>" class="btn btn-success">Одобрить</a>
+											<a href="?approvedid=<?php echo $comment_arr['ID'];?>" class="btn btn-success">Одобрить</a>
 										</div>
 										<div class="btn-group">
-											<a href="/editcomment.php/?id=<?php echo $comment_arr['ID'];?>" class="btn btn-primary">Редактировать</a>
+											<a href="editcomment.php?id=<?php echo $comment_arr['ID'];?>" class="btn btn-primary">Редактировать</a>
 										</div>
 										<div class="btn-group">
-											<a href="comments.php/?deleteId=<?php echo $comment_arr['ID'];?>" class="btn btn-danger">Удалить</a>
+											<a href="?deleteId=<?php echo $comment_arr['ID'];?>" class="btn btn-danger">Удалить</a>
 										</div>
 									</div>
 								</li>

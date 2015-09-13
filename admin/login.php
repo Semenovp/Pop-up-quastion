@@ -2,7 +2,7 @@
 	require_once('classes/Auth.php');
 	session_start();
 	$auth = new Auth();
-	if (isset($_POST)) {
+	if (isset($_POST['name'])) {
 		if ($auth->checkUser( $_POST['name'], $_POST['password'] )) {
 			$_SESSION['is_auth'] = true;
 			$_SESSION['login'] = $_POST['name'];
@@ -13,10 +13,9 @@
 
 	}
 	var_dump($_SESSION);
-	$_SESSION['is_auth'] = NULL;
-//	if ($auth->isAuth() == true) {
-//		header('Location: comments.php');
-//	}
+	if ($auth->isAuth() == true) {
+		header('Location: comments.php');
+	}
 ?>
 
 

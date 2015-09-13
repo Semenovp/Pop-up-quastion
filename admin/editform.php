@@ -2,6 +2,11 @@
 	require_once ('inc/header.php');
 	require_once('classes/Auth.php');
 	require_once('classes/Comment.php');
+	require_once('classes/Form.php');
+	$form = new Form();
+	if(isset($_POST['formedit'])) {
+		$form->editForm($_POST['formedit']);
+	}
 ?>
 <body>
 <div class="wrap">
@@ -18,22 +23,11 @@
 					<ul class="comment">
 						<li class="item">
 							<h2>Редактор форм</h2>
-							<form class="form-horizontal" role="form">
+							<form class="form-horizontal" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 								<div class="form-group">
 									<label for="inputPassword3" class="col-sm-2 control-label">Форма</label>
 									<div class="col-sm-10">
-										<textarea class="form-control" id="inputPassword3" cols="30" rows="10">
-											<pre>
-												<form class="form-horizontal" role="form">
-													<div class="form-group">
-														<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-														<div class="col-sm-10">
-															<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-														</div>
-													</div>
-												</form>
-											</pre>
-										</textarea>
+										<textarea class="form-control" id="inputPassword3" cols="30" rows="10" name="formedit"><?php $formRow = $form->getForm();echo $formRow['content'];?></textarea>
 									</div>
 								</div>
 								<div class="form-group">

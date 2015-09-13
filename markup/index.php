@@ -1,6 +1,8 @@
 <?php
 	require_once('../admin/classes/Auth.php');
 	require_once('../admin/classes/Comment.php');
+	require_once('../admin/classes/Form.php');
+	$form = new Form();
 	if ($_SERVER['REQUEST_METHOD']=='POST') {
 		$comment = new Comment();
 		$comment->createComment($_POST['answer']);
@@ -51,10 +53,10 @@
 		<div class="col-xs-12 main-form">
 			<h2>Оставьте отзыв</h2>
 			<form class="form-inline" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-				<div class="form-group">
-					<label class="sr-only" for="answer">Вопрос</label>
-					<input type="text" class="form-control" id="answer" placeholder="Ваш ответ" name="answer">
-				</div>
+				<?php
+					$formRow = $form->getForm();
+					echo $formRow['content'];
+				?>
 				<button type="submit" class="btn btn-primary">Отправить</button>
 			</form>
 			<div class="col-xs-12 main-comment flexslider">
@@ -65,7 +67,6 @@
 						</div>
 					</li>
 					<li class="item">
-						<h3>UserName</h3>
 						<div class="content">
 							Lorem ipsum dolor sit amet,eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 						</div>
