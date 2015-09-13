@@ -19,4 +19,8 @@ class Comment {
 		$db = DB::getDB();
 		$edit = $db->query("UPDATE comments SET content = '$content', tagn = '$tag', note = '$note' WHERE ID = '$id'");
 	}
+	public function createComment($data) {
+		$db = DB::getDB();
+		$insert = $db->query("INSERT INTO comments (content,tagn,note,status) VALUES('$data','-','-',0)");
+	}
 } 
