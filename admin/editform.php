@@ -7,6 +7,9 @@
 	if(isset($_POST['formedit'])) {
 		$form->editForm($_POST['formedit']);
 	}
+//	if (!$auth->isAuth()) {
+//		header('Location: login.php');
+//	}
 ?>
 <body>
 <div class="wrap">

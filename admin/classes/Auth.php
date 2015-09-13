@@ -1,5 +1,6 @@
 <?php
 	require_once('DB.php');
+	session_start();
 class Auth {
 	public function isAuth() {
 		if($_SESSION['is_auth'] == true) {

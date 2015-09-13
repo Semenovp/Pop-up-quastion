@@ -13,6 +13,9 @@
 	if($_SERVER['REQUEST_METHOD']=='POST') {
 		$comments->editComment($_POST['id'],$_POST['content'],$_POST['tag'],$_POST['note']);
 	}
+	if (!$auth->isAuth()) {
+		header('Location: login.php');
+	}
 ?>
 <!DOCTYPE html>
 <html>

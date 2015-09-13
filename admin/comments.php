@@ -6,7 +6,7 @@
 	$comments = new Comment();
 	if(isset($_GET['exit'])) {
 		$auth->out();
-		header('Location: comments.php');
+		header('Location: login.php');
 	}
 	if (isset($_GET['deleteId'])){
 		$comments->deleteComment($_GET['deleteId']);
@@ -14,10 +14,9 @@
 	if (isset($_GET['approvedid'])){
 		$comments->approvedComment($_GET['approvedid']);
 	}
-//	if (!$auth->isAuth()) {
-//		header('Location: login.php');
-//	}
-	var_dump($_SESSION);
+	if (!$auth->isAuth()) {
+		header('Location: login.php');
+	}
 ?>
 
 <body>
@@ -27,7 +26,7 @@
 			<ul class="nav nav-pills nav-stacked">
 				<li class="active"><a href="/"><span class="glyphicon glyphicon-comment"></span> Комментарии</a></li>
 				<li><a href="/editform.php"><span class="glyphicon glyphicon-pencil"></span> Редактировать форму</a></li>
-				<li><a href="comment.php?exit"><span class="glyphicon glyphicon-eject"></span> Выход</a></li>
+				<li><a href="?exit"><span class="glyphicon glyphicon-eject"></span> Выход</a></li>
 			</ul>
 		</div>
 		<div class="col-xs-9 content">
