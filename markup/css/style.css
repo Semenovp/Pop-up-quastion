@@ -53,15 +53,15 @@ body,html {
 
 }
 .main-comment ul li {
-	list-style: none;
+	/*list-style: none;*/
 	border: 1px solid #ccc;
-	margin:3px 0;
+	/*margin:3px 0;*/
 	padding: 10px;
-	background: #fff;
+	/*background: #fff;*/
 }
 .left {
 	float: left;
-	margin-right: 8px;
+	/*margin-right: 8px;*/
 }
 .mfp-content {
 	position: relative;
