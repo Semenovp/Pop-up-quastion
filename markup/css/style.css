@@ -4,7 +4,7 @@ body,html {
 }
 .aside {
 	background: #0c64a0;
-	height: 100vh;
+	min-height: 100vh;
 }
 .aside ul {
 	margin:10px 0 10px
