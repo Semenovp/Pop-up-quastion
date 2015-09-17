@@ -14,7 +14,7 @@
 
 		/* private-конструктор, подключающийся к базе данных, устанавливающий локаль и кодировку соединения */
 		private function __construct() {
-			$this->mysqli = new mysqli("localhost", "root", "123456", "data");
+			$this->mysqli = new mysqli("localhost", "root", "", "data");
 			$this->mysqli->query("SET lc_time_names = 'ru_RU'");
 			$this->mysqli->query("SET NAMES 'utf8'");
 		}

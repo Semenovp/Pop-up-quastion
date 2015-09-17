@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10deb1
+-- version 4.0.10.6
 -- http://www.phpmyadmin.net
 --
--- Хост: localhost
--- Время создания: Сен 13 2015 г., 22:22
--- Версия сервера: 5.5.43-0ubuntu0.14.04.1
--- Версия PHP: 5.5.9-1ubuntu4.9
+-- Хост: 127.0.0.1:3306
+-- Время создания: Сен 17 2015 г., 16:42
+-- Версия сервера: 5.5.41-log
+-- Версия PHP: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `form` (
 --
 
 INSERT INTO `form` (`ID`, `content`) VALUES
-(0, '<div class="form-group">					<label class="sr-only" for="answer">Вопрос</label>					<input type="text" class="form-control" id="answer" placeholder="Введите ответ" name="answer">				</div>');
+(0, '<div class="head-form">Напишет одно короткое предложение и получите расчет на 15% ниже рынка</div><div class="form-group">					<label class="sr-only" for="answer"></label>					<input type="text" class="form-control" id="answer" placeholder="Введите ответ" name="answer"></div>');
 
 -- --------------------------------------------------------
 

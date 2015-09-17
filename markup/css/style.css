@@ -95,3 +95,17 @@ body,html {
 	margin: 0 auto;
 	float:none;
 }
+/*form*/
+#answer {
+	width:565px;
+}
+.head-form {
+	margin:20px;
+	text-align: center;
+}
+.response{
+	margin:20px;
+}
+.footer {
+	margin:25px;
+}
